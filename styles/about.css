@@ -1,0 +1,16 @@
+.topic{
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 1000;
+}
+.history{
+  margin: 20px 50px 20px;
+}
+.history-image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3vh;
+  width: 50%;
+}
