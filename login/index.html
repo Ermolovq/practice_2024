@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Бібліотека</title>
+  <link rel="stylesheet" href="styles/login.css">
+</head>
+<body>
+  <a href="../">Назад до головної сторінки</a>
+  <form id="login">
+    <h3>Вхід у профіль</h3>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br>
+    <label for="password">Пароль:</label><br>
+    <input type="password" id="password" name="password" required><br>
+    <input type="submit" value="Увійти">
+  </form>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCPhTf35H-6QRXqUYZLLdL6QnXFtPou6qU",
+      authDomain: "practice-2024-2cf9d.firebaseapp.com",
+      databaseURL: "https://practice-2024-2cf9d-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "practice-2024-2cf9d",
+      storageBucket: "practice-2024-2cf9d.firebaseapp.com",
+      messagingSenderId: "781001774275",
+      appId: "1:781001774275:web:af81307e67927cd3027e76",
+      measurementId: "G-XFZB4YQT0M"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth();
+
+    document.getElementById("login").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      if (email && password) {
+        sessionStorage.setItem("email", email);
+        sessionStorage.setItem("password", password);
+
+        signInWithEmailAndPassword(auth, email, password)
+          .then(() => {
+            console.log("User logged in");
+            window.location.href = "../workplace/";
+          })
+          .catch((error) => {
+            const errorMessage = error.message;
+            console.error("Login error:", errorMessage);
+            alert("Email або пароль неправильні!");
+          });
+      }
+    });
+  </script>
+</body>
+</html>

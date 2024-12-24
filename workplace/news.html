@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Бібліотека</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../styles/workplace.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="menu">Головна</a>
+    <div class="current-menu menu">Новини</div>
+    <a href="new_books.html" class="menu">Надходження книжок</a>
+  </nav>
+  <div class="main">
+    <button id="addNewsButton" onclick="addNews()">Додати новину</button>
+    <div id="addNews" style="display: none;">
+      <form id="addNewsForm">
+        <p>Введіть дані</p>
+        <label for="title">Заголовок новини:</label><br>
+        <input type="text" id="title" name="title" required><br>
+        <label for="content">Вміст новини:</label><br>
+        <input type="text" id="content" name="content" required><br>
+        <input type="submit" value="Опублікувати новину">
+        <labale></labal>
+      </form>
+    </div>
+    news
+  </div>
+  <script src="connect.js" type="module"></script>
+  <script>
+    function addNews() {
+      const addForm = document.getElementById("addNews");
+      if(addForm.style.display == "none") {
+        addForm.style.display = "block";
+      } else if (addForm.style.display == "block") {
+        addForm.style.display = "none";
+      }
+    }
+  </script>
+  <script src="news.js" type="module"></script>
+</body>
+</html>

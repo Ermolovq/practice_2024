@@ -9,7 +9,7 @@ body{
   background-attachment: fixed;
   background-size: cover;
 }
-.main-menu{
+nav{
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -50,5 +50,9 @@ footer{
   height: 15vh;
   text-align: center;
   align-content: center;
-  background-color: aquamarine;
+  background-color: rgb(33, 33, 33);
+}
+.login{
+  color: rgb(207, 207, 207);
+  text-decoration: none;
 }
