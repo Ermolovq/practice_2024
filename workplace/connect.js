@@ -12,17 +12,18 @@ const firebaseConfig = {
   measurementId: "G-XFZB4YQT0M"
 };
 
-const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig)
 const auth = getAuth()
 
-const email = sessionStorage.getItem("email");
-const password = sessionStorage.getItem("password");
+const email = sessionStorage.getItem("email")
+const password = sessionStorage.getItem("password")
 
 signInWithEmailAndPassword(auth, email, password)
 .then(function() {
   console.log("User logged in")
 })
 .catch(function(error) {
-  const errorMessage = error.message;
-  console.error("Login error:", errorMessage);
+  const errorMessage = error.message
+  console.error("Login error:", errorMessage)
+  window.location.href = "../index.html"
 })

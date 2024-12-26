@@ -1,0 +1,37 @@
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+.back{
+  padding: 15px;
+  color: black;
+  text-decoration: none;
+  background-color: rgb(216, 237, 255);
+  border-radius: 20px;
+}
+#login{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: rgb(222, 222, 222);
+  border-radius: 20px;
+}
+h3{
+  font-size:xx-large;
+}
+label{
+  font-size:large;
+}
+input{
+  margin: 10px 0 10px;
+  width: 20vw;
+  height: 3vh;
+}
+#submit{
+  height: 5vh;
+  border-radius: 20px;
+}

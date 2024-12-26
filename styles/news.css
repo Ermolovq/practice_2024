@@ -1,0 +1,16 @@
+.news{
+  padding: 15px;
+  margin-bottom: 15px;
+}
+.title{
+  font-size: 1.5em;
+  justify-self: center;
+}
+.content{
+  margin: 3vh 3vw 3vh;
+  width: 80%;
+  padding: 10px;
+  justify-self: center;
+  background-color: rgb(155, 139, 93);
+  border-radius: 10px;
+}

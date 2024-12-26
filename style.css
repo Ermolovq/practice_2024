@@ -33,7 +33,11 @@ nav{
   cursor: pointer;
 }
 .current-menu{
-  background-color: cadetblue;
+  background-color: rgb(161, 145, 98);
+}
+.current-menu:hover{
+  background-color: rgb(161, 145, 98);
+  cursor: default;
 }
 .main{
   position: relative;
@@ -48,11 +52,24 @@ footer{
   top: 8vh;
   width: 70vw;
   height: 15vh;
-  text-align: center;
-  align-content: center;
   background-color: rgb(33, 33, 33);
+  color: rgb(207, 207, 207);
+}
+.address{
+  position: relative;
+  left: 5vw;
+  top: 3vh;
 }
 .login{
+  position: relative;
+  left: 5vw;
+  top: 5vh;
   color: rgb(207, 207, 207);
   text-decoration: none;
+}
+.author{
+  position: relative;
+  justify-self: right;
+  right: 5vw;
+  top: -6vh;
 }

@@ -5,17 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Бібліотека</title>
   <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../styles/workplace.css">
+  <link rel="stylesheet" href="new_books.css">
+  <script src="connect.js" type="module" defer></script>
 </head>
 <body>
   <nav>
-    <a href="index.html" class="menu">Головна</a>
+    <a href="../start-page.html" class="menu">Головна</a>
     <a href="news.html" class="menu">Новини</a>
     <div class="current-menu menu">Надходження книжок</div>
   </nav>
   <div class="main">
-    new books
+    <button id="addBookButton" onclick="addBook()">Додати книгу</button>
+    <div id="addBook" style="display: none;">
+      <form id="addBookForm">
+        <p>Введіть дані</p>
+        <label for="title">Назва книги:</label><br>
+        <input type="text" id="title" name="title" required><br>
+        <label for="author">Автор:</label><br>
+        <input type="text" id="author" name="author" required><br>
+        <label for="description">Опис:</label><br>
+        <textarea id="description" rows="8" cols="50" placeholder="Введіть опис книги" style="resize: none;"></textarea><br>
+        <input type="submit" value="Додати книгу">
+      </form>
+    </div>
+    <div id="booksContainer"></div>
   </div>
-  <script src="connect.js" type="module"></script>
+  <script>
+    function addBook() {
+      const addForm = document.getElementById("addBook");
+      if(addForm.style.display == "none") {
+        addForm.style.display = "block";
+      } else if (addForm.style.display == "block") {
+        addForm.style.display = "none";
+      }
+    }
+  </script>
+  <script src="new_books.js" type="module"></script>
 </body>
 </html>

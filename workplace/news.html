@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Бібліотека</title>
   <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../styles/workplace.css">
+  <link rel="stylesheet" href="news.css">
+  <script src="connect.js" type="module" defer></script>
 </head>
 <body>
   <nav>
-    <a href="index.html" class="menu">Головна</a>
+    <a href="../start-page.html" class="menu">Головна</a>
     <div class="current-menu menu">Новини</div>
     <a href="new_books.html" class="menu">Надходження книжок</a>
   </nav>
@@ -21,14 +22,12 @@
         <label for="title">Заголовок новини:</label><br>
         <input type="text" id="title" name="title" required><br>
         <label for="content">Вміст новини:</label><br>
-        <input type="text" id="content" name="content" required><br>
+        <textarea id="content" rows="8" cols="50" placeholder="Введіть вміст новини" style="resize: none;"></textarea><br>
         <input type="submit" value="Опублікувати новину">
-        <labale></labal>
       </form>
     </div>
-    news
+    <div id="newsContainer"></div>
   </div>
-  <script src="connect.js" type="module"></script>
   <script>
     function addNews() {
       const addForm = document.getElementById("addNews");
